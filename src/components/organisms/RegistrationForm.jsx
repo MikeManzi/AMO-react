@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Input } from '../atoms/Input';
 import { Button } from '../atoms/Button';
-// import { FormContainer } from '../molecules/FormContainer';
+import { FormContainer } from '../molecules/FormContainer';
 
 const RegistrationForm = ({ onSubmit }) => {
   const handleSubmit = (event) => {
@@ -19,7 +19,7 @@ const RegistrationForm = ({ onSubmit }) => {
   };
 
   return (
-    <div>
+    <FormContainer>
       <h2>Create an account</h2>
       <form onSubmit={handleSubmit}>
         <Input type="text" name="firstName" placeholder="First Name" required />
@@ -28,7 +28,7 @@ const RegistrationForm = ({ onSubmit }) => {
         <Input type="password" name="password" placeholder="Password" required />
         <Button type="submit">Sign up</Button>
       </form>
-    </div>
+    </FormContainer>
   );
 };
 
